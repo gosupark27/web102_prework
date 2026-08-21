@@ -97,13 +97,12 @@ function filterUnfundedOnly() {
 
     // use filter() to get a list of games that have not yet met their goal
     let underfundedGames = GAMES_JSON.filter((game) => {
-        console.log(game.name, typeof game.pledged, typeof game.goal, game.pledged < game.goal);
         return game.pledged < game.goal;
     });
-    // console.log(underfundedGames.length)
-
     // use the function we previously created to add the unfunded games to the DOM
     addGamesToPage(underfundedGames);
+
+    
 
 }
 
@@ -147,7 +146,7 @@ allBtn.addEventListener("click", showAllGames);
 */
 
 // grab the description container
-const descriptionContainer = document.getElementById("description-container");
+const descriptionContainer = document.querySelector(".description-container");
 
 // use filter or reduce to count the number of unfunded games
 let unfundedGamesCount = GAMES_JSON.filter((game) => {
@@ -163,6 +162,31 @@ const displayStr = `A total of $${totalAmount.toLocaleString('en-US')} has been 
 let newText = document.createElement('p');
 newText.innerHTML = displayStr;
 descriptionContainer.appendChild(newText);
+/*************************************************************************************
+ * Challenge 6 —-  Bonus Feature: Search Input Functionality 
+*/
+const searchForm = document.querySelector('form');
+const searchInput = document.querySelector("#search-input");
+
+searchForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    filterSearchOnly();
+});
+
+searchInput.addEventListener('search', (event) => {
+    event.preventDefault();
+    filterSearchOnly();
+});
+
+function filterSearchOnly() {
+    deleteChildElements(gamesContainer);
+
+    let searchedGames = GAMES_JSON.filter((game) => {
+        return game.name.toLowerCase().includes(searchInput.value.toLowerCase())
+    });
+
+    addGamesToPage(searchedGames);
+}
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
  * Skills used: spread operator, destructuring, template literals, sort 

@@ -7,21 +7,36 @@
   </head>
 
   <body>
-    <!-- header row with logo -->
-    <div class="header">
-        <img id="tentacles" src="assets/tentacles.png">
-        <h1 class="header-text">Sea Monster Crowdfunding</h1>
-    </div>
+    <!-- bonus feature: navbar with search function built in -->
+     <nav class="navbar">
+        <!-- brand/logo link -->
+        <a href="#" class="logo-link">
+            <img id="tentacles" src="assets/tentacles.png"> 
+            <span class="logo-text">Sea Monster Crowdfunding</span>
+        </a>
+        <!-- Search bar -->
+         <form class="search-container">
+                <input id="search-input" type="search" placeholder="Search Game">
+                <button class="search-btn">
+                    <i class="ph ph-magnifying-glass"></i>
+                </button>
+         </form>
+        <!-- navigation links -->
+        <ul class="navbar-links">
+            <li><a href="#stats" class="nav-item">Stats</a></li>
+            <li><a href="#button-container" class="nav-item">Our Games</a></li>
+        </ul>
+     </nav>
 
     <!-- background info about company -->
-    <h2>Welcome to Sea Monster!</h2>
-    <div id="description-container">
+     <div class="description-container">
+        <h2>Welcome to Sea Monster!</h2>
         <p>The purpose of our company is to fund independent games. We've been in operation for 12 years.</p>
     </div>
 
     <!-- top games & other interesting stats -->
     <h2>Stats</h2>
-    <div class="stats-container">
+    <div class="stats-container" id="stats">
         <div class="stats-card">
             <h3>Individual Contributions</h3>
             <p id="num-contributions">
@@ -59,6 +74,7 @@
 
     </div>
 
-    <script type="module" src="index.js"></script>
+    <script type="module" src="index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
   </body>
 </html>
