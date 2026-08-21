@@ -48,7 +48,7 @@ The following **optional features** are implemented:
 
 Here's a walkthrough of implemented features:
 
-<video src="walkthrough.mp4" width="100%" controls autoplay loop muted></video>  
+![](walkthrough.mp4)
 
 GIF created with [Kap](https://getkap.co/) for macOS
 
