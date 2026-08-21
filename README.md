@@ -1,53 +1,91 @@
-# WEB102 Prework - *Sea Monster Crowdfunding*
+
+# WEB102 Prework - **Nautilus Analytics**
+
+  
 
 Submitted by: **Josh Park**
 
-**Name of your app** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+  
 
-Time spent: **3-4** hours spent in total
+**Nautilus Analytics** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+
+  
+
+Time spent: **6-7** hours spent in total
+
+  
 
 ## Required Features
 
+  
+
 The following **required** functionality is completed:
 
-* [✔] The introduction section explains the background of the company and how many games remain unfunded.
-* [✔] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
-* [✔] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
-* [✔] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
+  
 
-The following **optional** features are implemented:
+* [x] The introduction section explains the background of the company and how many games remain unfunded.
+* [x] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
+* [x] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
+* [x] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
 
-* [ ] List anything else that you can get done to improve the app functionality!
+  
+
+The following **optional features** are implemented:
+
+  
+
+* [x] Navigation bar with links to sections, e.g., Stats, Our Games and logo-link to top of the page
+* [x] Search bar features:
+  * [x] Matching search result (can be a substring) to any of the game's names
+  * [x] Can either *click search icon* or press *enter* to have searched results displayed 
+  * [x] Click on ***x*** will clear previous results and restore to default, e.g., 11 games showing  
+
+  
 
 ## Video Walkthrough
 
+  
+
 Here's a walkthrough of implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<video src="walkthrough.mp4" width="100%" controls autoplay loop muted></video>  
 
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+GIF created with [Kap](https://getkap.co/) for macOS
+
+  
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+  
+
+* CSS styling the navigation bar, e.g., using text-decoration: none not on the ```<ul>``` itself but the nested links
+* Using pseudo-selectors correctly for adding extra touch, like ```:hover```
+* I was testing the function **```filterUnfundedOnly```** after I wrote out the block of code that would filter ```GAMES_JSON``` and display only seven games.  However, all eleven games showed up.  This happened because an EventListener was not added to the 'Show Unfunded Only' button to invoke ```filterUnfundedOnly()```.
+* Changing an ```id``` to ```class``` name, and the repercussions not just styling-wise, but in javascript. Especially if you're using ```getElementById``` but will now have to adapt and use ```querySelector``` instead. 
+
+  
 
 ## License
+Copyright [2026] [Josh Park]
 
-    Copyright [yyyy] [name of copyright owner]
+Licensed under the Apache License, Version 2.0 (the "License");
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+you may not use this file except in compliance with the License.
 
-        http://www.apache.org/licenses/LICENSE-2.0
+You may obtain a copy of the License at
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+  
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+  
+
+Unless required by applicable law or agreed to in writing, software
+
+distributed under the License is distributed on an "AS IS" BASIS,
+
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+See the License for the specific language governing permissions and
+
+limitations under the License.
