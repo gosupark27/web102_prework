@@ -47,8 +47,8 @@ The following **optional features** are implemented:
   
 
 Here's a walkthrough of implemented features:
-<img src="https://github.com/user-attachments/assets/8162eb27-f1e7-4eb9-9a50-299a810b8119" title="Video Walkthrough" width="100%" alt="Video Walkthrough" />
 
+<img src="walkthrough_web102.gif" title="Video Walkthrough" width="100%" alt="Video Walkthrough" />
 
 GIF created with [Kap](https://getkap.co/) for macOS
 
